@@ -1,3 +1,4 @@
+'''
 ROS2 VPN
 
 # ros2 install url
@@ -19,13 +20,14 @@ cyclonedds-discovery-server    #server choice
 cyclonedds-discovery-server --address 0.0.0.0 --port 5000
 
 
-RASPBERRY_PI                                                          PC
+               RASPBERRY_PI                                                 PC
 
-sudo nano ~/.bashrc                                                 sudo nano ~/.bashrc
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
-export ROS_DISCOVERY_SERVER='[PC_IP]:5000'              export ROS_DISCOVERY_SERVER='[RASPBERRY_PI_IP]:5000'
-export ROS_DOMAIN_ID=n                                        export ROS_DOMAIN_ID=n    # n must be same value
-export ROS_LOCALHOST_ONLY=0                               export ROS_LOCALHOST_ONLY=0
+sudo nano ~/.bashrc                                    sudo nano ~/.bashrc
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp           export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp 
+export ROS_DISCOVERY_SERVER='[PC_IP]:5000'             export ROS_DISCOVERY_SERVER='[RASPBERRY_PI_IP]:5000'
+export ROS_DOMAIN_ID=n                                 export ROS_DOMAIN_ID=n    # n must be same value
+export ROS_LOCALHOST_ONLY=0                            export ROS_LOCALHOST_ONLY=0
 
-source /opt/ros/humble/setup.bash                              source /opt/ros/humble/setup.bash
-ros2 run demo_nodes_cpp talker                                  ros2 run demo_nodes_cpp listener
+source /opt/ros/humble/setup.bash                      source /opt/ros/humble/setup.bash
+ros2 run demo_nodes_cpp talker                         ros2 run demo_nodes_cpp listener
+'''
